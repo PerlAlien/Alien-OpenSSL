@@ -29,9 +29,16 @@ my $builder = Alien::Base::ModuleBuild->new (
 		'rm -f libcrypto.pc libssl.pc'	# only leave openssl.pc to be picked up by alien
 		],
 	alien_install_commands => [
-		'make install',
+		'if [ -f \'config\' ]; then make install; fi', # if ! config, we should be system.
 		'rm -f libcrypto.pc libssl.pc'  # only leave openssl.pc to be picked up by alien
 		],
+	meta_merge => {
+		resources => {
+			homepage => 'https://github.com/0xxon/alien-openssl',
+			bugtracker => 'https://github.com/0xxon/alien-openssl/issues',
+			repository  => 'git://github.com/0xxon/alien-openssl.git',
+		},
+	},	
 );
 
 
