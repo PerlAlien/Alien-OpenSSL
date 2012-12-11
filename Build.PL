@@ -23,7 +23,7 @@ my $builder = Alien::Base::ModuleBuild->new (
 		pattern  => qr/^openssl-([\d\.]+\w?).tar\.gz$/,
 	},
 	alien_build_commands => [ 
-		'%pconfig --prefix=%s', 
+		'%pconfig shared --prefix=%s', 
 		'make', 
 		'make test',
 		'rm -f libcrypto.pc libssl.pc'	# only leave openssl.pc to be picked up by alien

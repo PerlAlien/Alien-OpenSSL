@@ -1,4 +1,7 @@
 Changes for Alien::OpenSSL
 
+* 0.02
+- also build shared library (it is not really of much use without them...)
+
 * 0.01
 - initial version
