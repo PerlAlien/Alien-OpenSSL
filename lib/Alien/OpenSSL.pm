@@ -3,7 +3,7 @@ package Alien::OpenSSL;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use parent 'Alien::Base';
 
@@ -44,4 +44,8 @@ Alien wrapper for OpenSSL
 =head1 DESCRIPTION
 
 This library provides an alien wrapper for OpenSSL.
+
+=head1 SEE ALSO
+
+OpenSSL(1), Crypt::OpenSSL::X509, Alien::Base
 

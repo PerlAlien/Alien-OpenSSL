@@ -29,7 +29,7 @@ my $builder = Alien::Base::ModuleBuild->new (
 		'rm -f libcrypto.pc libssl.pc'	# only leave openssl.pc to be picked up by alien
 		],
 	alien_install_commands => [
-		'if [ -f \'config\' ]; then make install; fi', # if ! config, we should be system.
+		'if [ -f \'config\' ]; then make install_sw; fi', # if ! config, we should be system.
 		'rm -f libcrypto.pc libssl.pc'  # only leave openssl.pc to be picked up by alien
 		],
 	meta_merge => {
