@@ -1,5 +1,8 @@
 Changes for Alien::OpenSSL
 
+* 0.03
+- only install software and skip docs. Is faster and prevents problems.
+
 * 0.02
 - also build shared library (it is not really of much use without them...)
 
