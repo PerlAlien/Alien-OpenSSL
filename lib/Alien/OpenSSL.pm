@@ -13,7 +13,7 @@ __END__
 
 =head1 NAME
 
-Acme::NSS - Alien wrapper for OpenSSL
+Alien::OpenSSL - Alien wrapper for OpenSSL
 
 =head1 SYNOPSIS
 
