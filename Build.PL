@@ -7,7 +7,7 @@ my $builder = Alien::Base::ModuleBuild->new (
 	module_name => 'Alien::OpenSSL',
 	license => 'perl',
 	configure_requires => {
-		'Alien::Base' => '0.001',
+		'Alien::Base' => '0.002', # pre-003 versions have a few severe bugs
 		'Module::Build' => '0.38',
 	},
 	requires => {
@@ -26,12 +26,9 @@ my $builder = Alien::Base::ModuleBuild->new (
 		'%pconfig shared --prefix=%s', 
 		'make', 
 		'make test',
-		'rm -f libcrypto.pc libssl.pc'	# only leave openssl.pc to be picked up by alien
 		],
-	alien_install_commands => [
-		'if [ -f \'config\' ]; then make install_sw; fi', # if ! config, we should be system.
-		'rm -f libcrypto.pc libssl.pc'  # only leave openssl.pc to be picked up by alien
-		],
+#	alien_install_commands => [
+#		],
 	meta_merge => {
 		resources => {
 			homepage => 'https://github.com/0xxon/alien-openssl',
