@@ -1,5 +1,8 @@
 Changes for Alien::OpenSSL
 
+* 0.06
+- add signature
+
 * 0.05
 - do not install doc, this lead to problems on some systems. Thanks, plicease
 

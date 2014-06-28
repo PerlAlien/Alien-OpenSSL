@@ -33,6 +33,9 @@
 \bBUILD.COM$
 \bbuild.com$
 
+# Alien stuff
+\b_alien/
+
 # Avoid temp and backup files.
 ~$
 \.old$
@@ -67,7 +70,7 @@
 \bBuild.COM$
 \bBUILD.COM$
 \bbuild.com$
-^MANIFEST\.SKIP
+# ^MANIFEST\.SKIP - needed for module::signature
 
 # Avoid archives of this distribution
 \bAlien-OpenSSL-[\d\.\_]+
