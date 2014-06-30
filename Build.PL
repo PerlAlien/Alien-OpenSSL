@@ -1,7 +1,11 @@
 use strict;
 use warnings;
+use IPC::Cmd qw/can_run/;
 
 use Alien::Base::ModuleBuild;
+
+my $addcc = "";
+$addcc = "CC=cc " if ( (!can_run('gcc')) && can_run('cc') );
 
 my $builder = Alien::Base::ModuleBuild->new (
 	(sign => 1),
@@ -24,10 +28,10 @@ my $builder = Alien::Base::ModuleBuild->new (
 		location => '/source/',
 		pattern  => qr/^openssl-([\d\.]+\w?).tar\.gz$/,
 	},
-	alien_build_commands => [ 
-		'%pconfig shared --prefix=%s', 
-		'make', 
-		'make test',
+	alien_build_commands => [
+		$addcc.'%pconfig shared --prefix=%s',
+		$addcc.'make',
+		$addcc.'make test',
 		],
 	alien_install_commands => [
 	        'make install_sw',
@@ -38,7 +42,7 @@ my $builder = Alien::Base::ModuleBuild->new (
 			bugtracker => 'https://github.com/0xxon/alien-openssl/issues',
 			repository  => 'git://github.com/0xxon/alien-openssl.git',
 		},
-	},	
+	},
 );
 
 
