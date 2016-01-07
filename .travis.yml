@@ -11,7 +11,7 @@ perl:
 env:
   - ALIEN_FORCE=1
 install:
-  - cpanm --notest Alien::Base~@0.024
+  - cpanm --notest Alien::Base~0.024
 script:
   - perl Build.PL && ./Build manifest && perl Build.PL && ./Build && ./Build test
   
