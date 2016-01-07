@@ -10,6 +10,7 @@ perl:
   - "5.8"
 env:
   - ALIEN_FORCE=1
+  - NO_ALIEN_FORCE=1
 install:
   - cpanm --notest Alien::Base~0.024
 script:
