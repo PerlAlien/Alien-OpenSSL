@@ -1,0 +1,7 @@
+Build
+MANIFEST
+MYMETA.json
+MYMETA.yml
+_build/
+_share/
+blib/
