@@ -4,4 +4,5 @@ MYMETA.json
 MYMETA.yml
 _build/
 _share/
+_alien/
 blib/
