@@ -36,6 +36,9 @@
 # Alien stuff
 \b_alien/
 
+# Travis
+^\.travis\.yml$
+
 # Avoid temp and backup files.
 ~$
 \.old$

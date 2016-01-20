@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use IPC::Cmd qw/can_run/;
 
-use Alien::Base::ModuleBuild '0.024';
+use Alien::Base::ModuleBuild '0.025';
 
 my $addcc = "";
 $addcc = "CC=cc " if ( (!can_run('gcc')) && can_run('cc') );
@@ -50,13 +50,13 @@ my $builder = $class->new (
 	module_name => 'Alien::OpenSSL',
 	license => 'perl',
 	configure_requires => {
-		'Alien::Base' => '0.024',
+		'Alien::Base' => '0.025',
 		'Module::Build' => '0.38',
 		'Test::More' => 0,
 	},
 	requires => {
 		'perl' => '5.8.1',
-		'Alien::Base' => '0.024',
+		'Alien::Base' => '0.025',
 	},
 	dist_author => 'Johanna Amann <johanna@icir.org>',
 	alien_name => 'openssl',
@@ -76,7 +76,7 @@ my $builder = $class->new (
 		$addcc.'make test',
 	],
 	alien_install_commands => [
-	        'make install_sw',
+		'make install_sw',
 	],
 	meta_merge => {
 		resources => {

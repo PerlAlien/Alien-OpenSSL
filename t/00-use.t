@@ -11,4 +11,8 @@ diag("Cflags: ".Alien::OpenSSL->cflags);
 diag("Install type: ".Alien::OpenSSL->install_type);
 
 my %libs = map { $_ => 1 } shellwords( Alien::OpenSSL->libs );
-ok(defined($libs{'-lcrypto'}), 'Libcrypto defined');
+if ($^O eq 'MSWin32') {
+	ok(1, 'Library defined') if ( defined($libs{'-lssl32'}) || defined($libs{'-lcrypto'}) );
+} else {
+	ok(defined($libs{'-lcrypto'}), 'Libcrypto defined');
+}
