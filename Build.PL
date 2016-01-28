@@ -50,7 +50,7 @@ my $builder = $class->new (
 	module_name => 'Alien::OpenSSL',
 	license => 'perl',
 	configure_requires => {
-		'Alien::Base' => '0.025',
+		'Alien::Base::ModuleBuild' => '0.025',
 		'Module::Build' => '0.38',
 		'Test::More' => 0,
 	},
