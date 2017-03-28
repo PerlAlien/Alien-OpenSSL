@@ -87,5 +87,16 @@ my $builder = $class->new (
 	},
 );
 
+my %args = $builder->args;
+
+my $version;
+$version = $args{version} if(exists $args{version});
+
+if ( defined($version) ) {
+	my $location = "/source/openssl-".$version.".tar.gz";
+	print "Downloading from $location\n";
+	$builder->alien_repository->{pattern} = qr#\Qopenssl-$version.tar.gz\E$#;
+	print $builder->alien_repository->{pattern}."\n";
+}
 
 $builder->create_build_script;
