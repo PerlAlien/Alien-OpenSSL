@@ -9,10 +9,10 @@ perl:
   - "5.10"
   - "5.8"
 env:
-  - ALIEN_FORCE=1
-  - NO_ALIEN_FORCE=1
+  - ALIEN_INSTALL_TYPE=share
+  - ALIEN_INSTALL_TYPE=system
 install:
-  - cpanm --notest Alien::Base~0.024
+  - cpanm --notest Alien::Build~1.19
 script:
-  - perl Build.PL && ./Build manifest && perl Build.PL && ./Build && ./Build test
+  - perl Makefile.PL && make manifest && perl Makefile.PL && make && make test
   
