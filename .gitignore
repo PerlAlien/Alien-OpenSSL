@@ -1,11 +1,10 @@
-Build
+Makefile
 MANIFEST
 MYMETA.json
 MYMETA.yml
 META.json
 META.yml
 Alien-OpenSSL*.tar.gz
-_build/
-_share/
 _alien/
 blib/
+/pm_to_blib
