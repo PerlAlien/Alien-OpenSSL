@@ -70,7 +70,7 @@ share {
     build [
       './config --prefix=%{.install.prefix} shared',
       '%{make}',
-      '%{make} DESTDIR=%{env.DESTDIR} install',
+      '%{make} DESTDIR=%{env.DESTDIR} INSTALL_PREFIX=%{env.DESTDIR} install',
     ];
   }
   elsif($system_type eq 'windows-microsoft')
