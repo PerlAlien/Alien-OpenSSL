@@ -110,7 +110,9 @@ share {
       die "unable to build";
     };
   }
-  
+
+  test [ '%{make} test' ];
+
   plugin 'Gather::IsolateDynamic';
 
 };
