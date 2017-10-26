@@ -111,6 +111,8 @@ share {
     };
   }
 
+  test [ '%{make} test' ];
+
   plugin 'Gather::IsolateDynamic';
 
 };
