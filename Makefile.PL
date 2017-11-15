@@ -23,6 +23,16 @@ WriteMakefile($abmm->mm_args(
 			repository  => 'git://github.com/0xxon/alien-openssl.git',
 		},
 	},
+	"CONFIGURE_REQUIRES" => {
+		"Alien::Build" => "1.30",
+		"Alien::Build::MM" => "1.30",
+	},
+	"BUILD_REQUIRES" => {
+		"Alien::Build::MM" => "1.30",
+	},
+	"PREREQ_PM" => {
+		"Alien::Build" => "1.30",
+	},
 ));
 
 sub MY::postamble {
