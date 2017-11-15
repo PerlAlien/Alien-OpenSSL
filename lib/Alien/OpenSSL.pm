@@ -3,7 +3,7 @@ package Alien::OpenSSL;
 use strict;
 use warnings;
 
-our $VERSION = '0.10_2';
+our $VERSION = '0.10_3';
 
 use parent 'Alien::Base';
 
