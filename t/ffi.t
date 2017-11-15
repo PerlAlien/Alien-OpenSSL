@@ -14,7 +14,7 @@ note "dynamic=$_" for Alien::OpenSSL->dynamic_libs;
 
 ffi_ok with_subtest {
   my($ffi) = @_;
-  #$ffi->ignore_not_found(1);
+  $ffi->ignore_not_found(1);
   my $version_function = $ffi->function('OpenSSL_version' => ['int'] => 'string') ||
                          $ffi->function('SSLeay_version'  => ['int'] => 'string');
   ok($version_function, 'has SSLeay or OpenSSL _version function');
