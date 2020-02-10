@@ -1,5 +1,10 @@
 language: perl
 perl:
+  - "dev"
+  - "5.30"
+  - "5.28"
+  - "5.26"
+  - "5.24"
   - "5.22"
   - "5.20"
   - "5.18"
@@ -11,8 +16,18 @@ perl:
 env:
   - ALIEN_INSTALL_TYPE=share
   - ALIEN_INSTALL_TYPE=system
+matrix:
+  allow_failures:
+    - perl: 5.8
+      env: ALIEN_INSTALL_TYPE=share
+before_install:
+  - eval $(curl https://travis-perl.github.io/init)
+  - build-perl
+  - perl -V
 install:
   - cpanm --notest Alien::Build~1.19
+  - cpanm --notest --installdeps .
 script:
-  - perl Makefile.PL && make manifest && perl Makefile.PL && make && make test
-  
+  - perl Makefile.PL
+  - (make 2>&1 > make.log) || (tail -5000 make.log && false)
+  - make test
