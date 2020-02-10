@@ -32,8 +32,10 @@ WriteMakefile($abmm->mm_args(
 	},
 	"PREREQ_PM" => {
 		"Alien::Build" => "1.30",
+		"parent"       => "0",
 	},
 	"TEST_REQUIRES" => {
+		"Test2::V0"         => "0",
 		"Test::Alien::Diag" => "0",
 	},
 ));
