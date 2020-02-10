@@ -33,6 +33,9 @@ WriteMakefile($abmm->mm_args(
 	"PREREQ_PM" => {
 		"Alien::Build" => "1.30",
 	},
+	"TEST_REQUIRES" => {
+		"Test::Alien::Diag" => "0",
+	},
 ));
 
 sub MY::postamble {
