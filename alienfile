@@ -2,6 +2,10 @@ use alienfile;
 use Config;
 use Env qw( @PKG_CONFIG_PATH @PKG_CONFIG_LIBDIR );
 
+if(defined $ENV{OPENSSL_PREFIX} && -d "$ENV{OPENSSL_PREFIX}/lib/pkgconfig") {
+  unshift @PKG_CONFIG_PATH, "$ENV{OPENSSL_PREFIX}/lib/pkgconfig";
+}
+
 if($^O eq 'darwin' && ! -d '/usr/include/openssl') {
   # The OpenSSL that ships with recent OS X is completely broken
   # from a developer perspective.  They provide an openssl binary,
