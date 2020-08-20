@@ -9,7 +9,6 @@ GetOptions("version=s" => \$version);
 my $abmm = Alien::Build::MM->new(my_openssl_version => $version);
 
 WriteMakefile($abmm->mm_args(
-	SIGN         => 1,
 	ABSTRACT     => 'Alien wrapper for OpenSSL',
 	DISTNAME     => 'Alien-OpenSSL',
 	NAME         => 'Alien::OpenSSL',
