@@ -5,7 +5,7 @@ use warnings;
 
 our $VERSION = '0.11';
 
-use parent 'Alien::Base';
+use base 'Alien::Base';
 
 1;
 
