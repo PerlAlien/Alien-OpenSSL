@@ -17,9 +17,9 @@ WriteMakefile($abmm->mm_args(
 	AUTHOR       => 'Johanna Amann <johanna@icir.org>',
 	META_MERGE => {
 		resources => {
-			homepage => 'https://github.com/0xxon/alien-openssl',
-			bugtracker => 'https://github.com/0xxon/alien-openssl/issues',
-			repository  => 'git://github.com/0xxon/alien-openssl.git',
+			homepage => 'https://github.com/PerlAlien/Alien-OpenSSL',
+			bugtracker => 'https://github.com/PerlAlien/Alien-OpenSSL/issues',
+			repository  => 'git://github.com/PerlAlien/Alien-OpenSSL.git',
 		},
 	},
 	"CONFIGURE_REQUIRES" => {
