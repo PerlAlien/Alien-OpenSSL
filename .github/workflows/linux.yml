@@ -18,68 +18,95 @@ jobs:
         cip:
           - env: ALIEN_INSTALL_TYPE=share
             tag: "5.33"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.33"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=share
             tag: "5.32"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.32"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=share
             tag: "5.30"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.30"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=share
             tag: "5.28"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.28"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=share
             tag: "5.26"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.26"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=share
             tag: "5.24"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.24"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=share
             tag: "5.22"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.22"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=share
             tag: "5.20"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.20"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=share
             tag: "5.18"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.18"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=share
             tag: "5.16"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.16"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=share
             tag: "5.14"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.14"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=share
             tag: "5.12"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.12"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=share
             tag: "5.10"
+            allow_fail: false
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.10"
-          - allow_fail: true
-            env: ALIEN_INSTALL_TYPE=share
+            allow_fail: false
+          - env: ALIEN_INSTALL_TYPE=share
             tag: "5.8"
+            allow_fail: true
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.8"
+            allow_fail: false
 
     env:
       CIP_ENV: ${{ matrix.cip.env }}
       CIP_TAG: ${{ matrix.cip.tag }}
 
 
-    continue-on-error: ${{ matrix.cip.allow_fail || false }}
+    continue-on-error: ${{ matrix.cip.allow_fail }}
 
     steps:
       - uses: actions/checkout@v2
