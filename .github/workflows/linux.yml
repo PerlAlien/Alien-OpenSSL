@@ -79,7 +79,7 @@ jobs:
       CIP_TAG: ${{ matrix.cip.tag }}
 
 
-    continue-on-error: ${{ matrix.cip.allow_fail }}
+    continue-on-error: ${{ matrix.cip.allow_fail || false }}
 
     steps:
       - uses: actions/checkout@v2
