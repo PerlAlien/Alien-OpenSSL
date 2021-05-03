@@ -25,6 +25,7 @@ jobs:
         alien:
           - install_type: share
           - install_type: system
+            packages: openssl
 
     env:
       ALIEN_INSTALL_TYPE: ${{ matrix.alien.install_type }}
