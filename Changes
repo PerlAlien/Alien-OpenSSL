@@ -1,4 +1,6 @@
-Changes for Alien::OpenSSL
+Changes for {{$dist->name}}
+
+{{$NEXT}}
 
 * 0.11
 - Better detection of OpenSSL on macOS via home brew
