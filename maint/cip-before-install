@@ -9,5 +9,3 @@ if echo $CIP_ENV | grep -q system; then
 else
   echo 'use internet OpenSSL'
 fi
-
-cip exec cpanm Alien::Build Alien::Build::MM
