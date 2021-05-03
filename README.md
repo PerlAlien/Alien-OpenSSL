@@ -1,4 +1,4 @@
-# Alien::OpenSSL ![linux](https://github.com/PerlFFI/Alien-OpenSSL/workflows/linux/badge.svg) ![macos](https://github.com/PerlFFI/Alien-OpenSSL/workflows/macos/badge.svg)
+# Alien::OpenSSL ![linux](https://github.com/PerlAlien/Alien-OpenSSL/workflows/linux/badge.svg) ![macos](https://github.com/PerlAlien/Alien-OpenSSL/workflows/macos/badge.svg)
 
 Alien wrapper for OpenSSL
 
