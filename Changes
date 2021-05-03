@@ -2,6 +2,9 @@ Changes for {{$dist->name}}
 
 {{$NEXT}}
 
+0.12      2021-05-03 14:50:11 -0600
+  - Update metadata
+
 * 0.11
 - Better detection of OpenSSL on macOS via home brew
 - now honors the OPENSSL_PREFIX environment variable a la Net::SSLeay
