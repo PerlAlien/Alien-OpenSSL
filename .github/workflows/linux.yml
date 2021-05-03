@@ -49,8 +49,8 @@ jobs:
             tag: "5.20"
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.20"
-          - env: ALIEN_INSTALL_TYPE=share
-            tag: "5.18"
+#          - env: ALIEN_INSTALL_TYPE=share
+#            tag: "5.18"
           - env: ALIEN_INSTALL_TYPE=system
             tag: "5.18"
           - env: ALIEN_INSTALL_TYPE=share
