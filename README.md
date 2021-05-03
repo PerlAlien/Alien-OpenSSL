@@ -57,6 +57,10 @@ Original author: Johanna Amann <johanna@icir.org>
 
 Current maintainer: Graham Ollis <plicease@cpan.org>
 
+Contributors:
+
+Salvador Fandiño
+
 # COPYRIGHT AND LICENSE
 
 This software is copyright (c) 2012-2021 by Johanna Amann.

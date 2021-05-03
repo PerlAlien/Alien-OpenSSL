@@ -6,6 +6,7 @@ pod_spelling_system:
   stopwords:
     - Amann
     - OpenSSL
+    - Fandi
 
 pod_coverage:
   skip: 0
