@@ -63,7 +63,7 @@ Salvador Fandiño
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012-2021 by Johanna Amann.
+This software is copyright (c) 2012-2022 by Johanna Amann.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
