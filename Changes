@@ -1,6 +1,7 @@
 Changes for {{$dist->name}}
 
 {{$NEXT}}
+  - Add support for mac ports system install (gh#18)
 
 0.12      2021-05-03 14:50:11 -0600
   - Update metadata
