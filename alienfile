@@ -118,6 +118,7 @@ share {
 
   if($system_type =~ /^(unix|windows-mingw)$/)
   {
+    plugin 'PkgConfig::MakeStatic';
     build [
       './config --prefix=%{.install.prefix} --libdir=%{.install.prefix}/lib shared',
       '%{make}',
