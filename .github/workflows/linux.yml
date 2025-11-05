@@ -19,9 +19,13 @@ jobs:
         cip:
           - tag: static
           - install_type: share
-            tag: "5.37"
+            tag: "5.40"
           - install_type: system
-            tag: "5.37"
+            tag: "5.40"
+          - install_type: share
+            tag: "5.38"
+          - install_type: system
+            tag: "5.38"
           - install_type: share
             tag: "5.36"
           - install_type: system
@@ -74,8 +78,6 @@ jobs:
             tag: "5.12"
           - install_type: system
             tag: "5.12"
-          - install_type: share
-            tag: "5.10"
           - install_type: system
             tag: "5.10"
           - install_type: system
