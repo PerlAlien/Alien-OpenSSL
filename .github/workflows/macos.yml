@@ -31,7 +31,7 @@ jobs:
       ALIEN_INSTALL_TYPE: ${{ matrix.alien.install_type }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
 
       - name: Set up Perl
         run: |
@@ -48,12 +48,10 @@ jobs:
           ls -l perlversion.txt
 
       - name: Cache CPAN modules
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         with:
           path: ~/perl5
           key: ${{ runner.os }}-build-${{ matrix.alien.install_type }}-${{ hashFiles('perlversion.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ matrix.alien.install_type }}-${{ hashFiles('perlversion.txt') }}
 
       - name: Install Static Dependencies
         run: |
