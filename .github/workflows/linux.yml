@@ -19,9 +19,13 @@ jobs:
         cip:
           - tag: static
           - install_type: share
-            tag: "5.37"
+            tag: "5.40"
           - install_type: system
-            tag: "5.37"
+            tag: "5.40"
+          - install_type: share
+            tag: "5.38"
+          - install_type: system
+            tag: "5.38"
           - install_type: share
             tag: "5.36"
           - install_type: system
@@ -74,8 +78,6 @@ jobs:
             tag: "5.12"
           - install_type: system
             tag: "5.12"
-          - install_type: share
-            tag: "5.10"
           - install_type: system
             tag: "5.10"
           - install_type: system
@@ -89,7 +91,7 @@ jobs:
     #continue-on-error: ${{ matrix.cip.allow_fail || false }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
 
       - name: Bootstrap CIP
         run: |
@@ -98,16 +100,13 @@ jobs:
       - name: Cache-Key
         id: cache-key
         run: |
-          echo -n '::set-output name=key::'
-          cip cache-key
+          echo "key=$( cip cache-key )" >> $GITHUB_OUTPUT
 
       - name: Cache CPAN modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ~/.cip
           key: ${{ runner.os }}-build-${{ steps.cache-key.outputs.key }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ steps.cache-key.outputs.key }}
 
       - name: Start-Container
         run: |
